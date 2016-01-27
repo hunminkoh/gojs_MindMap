@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+  *:focus {
+    outline: none;
+}
+</style>
+<title>Mind Map</title>
+<meta name="description" content="An organization chart editor -- edit details and change relationships." />
+<!-- Copyright 1998-2016 by Northwoods Software Corporation. -->
+<meta charset="UTF-8">
+<script src="/javascripts/go.js"></script>
+<script src="/javascripts/RealtimeDragSelectingTool.js"></script>
+<!-- http://gojs.net/latest/extensions/RealtimeDragSelecting.html -->
+<script src="/javascripts/mindmap.js"></script>
+
+</head>
+<body onload="init()">
+  <div>
+    <div style="width:100%; white-space:nowrap;">
+      <span style="display: inline-block; center-align: top; padding: 5px; width:100%">
+        <div id="myDiagram" style="width:100%; height: 620px"></div>
+      </span>
+    </div>
+
+    <button id="SaveButton" onclick="save()">Save</button>
+    <button onclick="load()">Load</button>
+    <textarea id="mySavedModel" style="width:100%;height:300px">
+
+{ "class": "go.GraphLinksModel",
+"linkFromPortIdProperty": "fromPort",
+"linkToPortIdProperty": "toPort",
+"nodeDataArray": [
+  {"text":"Comment", "figure":"RoundedRectangle", "fill":"white", "key":-1}
+],
+"linkDataArray": [
+]}
+    </textarea>
+  </div>
+</body>
+</html>
